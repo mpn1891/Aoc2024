@@ -28,6 +28,7 @@ def main():
             p1 += 1
         check_p2 = False
         for j in range(len(array[i])):
+            # if its 1,2,3,4,5 first iteration would be 2,3,4,5 and then next would be 1,3,4,5
             temp_list = array[i][:j] + array[i][j+1:]
             if check_report(temp_list):
                 check_p2 = True
