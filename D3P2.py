@@ -10,11 +10,11 @@ def main():
         for line in f.read().splitlines():
             array.append(line.split('mul'))
 
-    enabled = True
+    do = True
     for i in range(len(array)):
         for j in range(len(array[i])):
 
-            if array[i][j].find('(') == 0 and array[i][j].find(',') != -1 and array[i][j].find(')') != -1 and enabled:
+            if array[i][j].find('(') == 0 and array[i][j].find(',') != -1 and array[i][j].find(')') != -1 and do:
 
                 wrk = array[i][j].split(',')
                 wrk[0] = wrk[0][wrk[0].find('(') + 1:]
@@ -24,9 +24,9 @@ def main():
                     p2 += int(wrk[0]) * int(wrk[1])
 
             if array[i][j].find('''don't()''') != -1:
-                enabled = False
+                do = False
             if array[i][j].find('''do()''') != -1:
-                enabled = True
+                do = True
     print(p2)
 
 
