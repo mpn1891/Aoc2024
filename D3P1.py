@@ -21,7 +21,7 @@ def main():
 
                 wrk = array[i][j].split(',')
 
-                wrk[0] = wrk[0][wrk[0].find('(' ) +1:]
+                wrk[0] = wrk[0][wrk[0].find('(') +1:]
 
                 wrk[1] = wrk[1][:wrk[1].find(')')]
 
